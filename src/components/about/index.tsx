@@ -1,41 +1,15 @@
 import { useState } from "react";
 import { FaAngleRight, FaAngleDown } from "react-icons/fa";
+import NextSection from "../nextSection";
 
 export default function AboutMe() {
-  const [listButton, setListButton] = useState<string[]>(["aboutMe"]);
-
-  function closeButtons(button: string) {
-    const list = listButton.filter((element, index) => element !== button);
-    setListButton(list);
-  }
-
   return (
-    <section className="section min-h-[55vh]" id="aboutMe">
+    <section className="section h-[90vh]" id="aboutMe">
       <h2 className="section-title"># Sobre mim</h2>
       <ul className="w-full h-full col-center gap-6">
         <li className="about-me-li">
-          <button
-            className="about-me-li-btn"
-            onClick={(event) => {
-              event.preventDefault();
-              return listButton.includes("aboutMe")
-                ? closeButtons("aboutMe")
-                : setListButton([...listButton, "aboutMe"]);
-            }}
-          >
-            <h3 className="text-lg font-semibold">Sobre mim</h3>
-            <FaAngleRight
-              className={listButton.includes("aboutMe") ? "hidden" : "flex"}
-            />
-            <FaAngleDown
-              className={listButton.includes("aboutMe") ? "flex" : "hidden"}
-            />
-          </button>
-          <p
-            className={
-              listButton.includes("aboutMe") ? "about-me-li-p" : "hidden"
-            }
-          >
+          <h3 className="w-11/12 text-lg font-semibold">Sobre mim</h3>
+          <p className="about-me-li-p">
             Olá, meu nome é Andressa e tenho 19 anos. Sempre fui apaixonada por
             matemática e jogos de lógica, o que me levou a desenvolver
             habilidades em resolução de problemas e raciocínio crítico. Gosto de
@@ -49,40 +23,16 @@ export default function AboutMe() {
             crescimento.
           </p>
         </li>
-        <li className="about-me-li">
-          <button
-            className="about-me-li-btn"
-            onClick={(event) => {
-              event.preventDefault();
-              return listButton.includes("professional")
-                ? closeButtons("professional")
-                : setListButton([...listButton, "professional"]);
-            }}
-          >
-            <h3 className="text-lg font-semibold">Vida profissional</h3>
-            <FaAngleRight
-              className={
-                listButton.includes("professional") ? "hidden" : "flex"
-              }
-            />
-            <FaAngleDown
-              className={
-                listButton.includes("professional") ? "flex" : "hidden"
-              }
-            />
-          </button>
-          <p
-            className={
-              listButton.includes("professional") ? "about-me-li-p" : "hidden"
-            }
-          >
+        {/* <li className="about-me-li">
+          <h3 className="text-lg font-semibold">Vida profissional</h3>
+          <p className="about-me-li-p">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat vel
             distinctio nam illo omnis sit? Pariatur ratione optio quos
             accusantium fuga corporis assumenda corrupti aperiam debitis, itaque
             iure, doloribus dolores!
           </p>
-        </li>
-        <li className="about-me-li">
+        </li> */}
+        {/* <li className="about-me-li">
           <button
             className="about-me-li-btn"
             onClick={(event) => {
@@ -137,8 +87,9 @@ export default function AboutMe() {
             saepe optio. Nostrum ipsum tenetur perferendis voluptates, modi ad
             est tempore ullam.
           </p>
-        </li>
+        </li> */}
       </ul>
+      <NextSection nextSection="#skills" />
     </section>
   );
 }

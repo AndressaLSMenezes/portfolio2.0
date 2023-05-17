@@ -17,7 +17,9 @@ const nunito = Nunito({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Component {...pageProps} className={`${poppins.variable} ${nunito.variable}`} />
+      <main className={`${poppins.variable} ${nunito.variable} font-sans`}>
+        <Component {...pageProps} />
+      </main>
     </>
   );
 }

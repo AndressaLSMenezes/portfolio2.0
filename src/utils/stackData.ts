@@ -85,4 +85,18 @@ export const skillsData: ISkill[] = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat vel distinctio nam illo omnis sit? Pariatur ratione optio quos accusantium fuga corporis assumenda corrupti aperiam debitis, itaque iure, doloribus dolores",
   },
+  {
+    title: "Tailwind",
+    img: tailwind,
+    subTitle: "HyperText Markup Language",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat vel distinctio nam illo omnis sit? Pariatur ratione optio quos accusantium fuga corporis assumenda corrupti aperiam debitis, itaque iure, doloribus dolores",
+  },
+  {
+    title: "Yarn",
+    img: yarn,
+    subTitle: "HyperText Markup Language",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat vel distinctio nam illo omnis sit? Pariatur ratione optio quos accusantium fuga corporis assumenda corrupti aperiam debitis, itaque iure, doloribus dolores",
+  },
 ];

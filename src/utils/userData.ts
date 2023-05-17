@@ -1,5 +1,3 @@
-
-
 export const userData = {
   nameUser: "Andressa Menezes",
   githubUrl: "https://github.com/AndressaLSMenezes",
