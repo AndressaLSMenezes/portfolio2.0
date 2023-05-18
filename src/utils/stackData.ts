@@ -1,7 +1,5 @@
-import { ISkill } from "@/interfaces";
 import css from "@/assets/css.svg";
 import git from "@/assets/git.svg";
-import github from "@/assets/github.svg";
 import html from "@/assets/html.svg";
 import javascript from "@/assets/javascript.svg";
 import nextjs from "@/assets/nextjs.svg";
@@ -12,6 +10,13 @@ import react from "@/assets/react.svg";
 import tailwind from "@/assets/tailwind.svg";
 import typescript from "@/assets/typescript.svg";
 import yarn from "@/assets/yarn.svg";
+
+export interface ISkill {
+  title: string;
+  subTitle: string;
+  description: string;
+  img: string;
+}
 
 export const skillsData: ISkill[] = [
   {

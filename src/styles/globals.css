@@ -14,18 +14,18 @@
   --color-6: #00bfa6;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: rgb(255, 255, 255);
-    --background-start-rgb: rgb(15, 23, 42);
-    --background-end-rgb: rgb(15, 23, 42);
-    --color-2: #011b32;
-    --color-4: #023e73;
-    --color-5: #00bfa6;
-    --color-6: #037d6c;
-    --color-7: #00bfa6;
-  }
+/* @media (color-scheme: dark) { */
+.dark:root {
+  --foreground-rgb: rgb(255, 255, 255);
+  --background-start-rgb: rgb(15, 23, 42);
+  --background-end-rgb: rgb(15, 23, 42);
+  --color-2: #011b32;
+  --color-4: #023e73;
+  --color-5: #00bfa6;
+  --color-6: #037d6c;
+  --color-7: #00bfa6;
 }
+/* } */
 
 body {
   color: var(--foreground-rgb);
@@ -61,11 +61,11 @@ body {
   }
 
   #__next {
-    @apply w-screen min-h-screen relative bg-slate-200 dark:bg-brand-200;
+    @apply w-screen min-h-screen relative bg-slate-200 dark:bg-brand-200 h-auto;
   }
 
   body {
-    @apply leading-none w-screen h-screen relative;
+    @apply leading-none w-screen min-h-screen h-auto relative;
   }
 
   ol,
@@ -91,7 +91,7 @@ body {
   }
 
   .header-link-span {
-    @apply absolute -bottom-1 left-0 w-0 h-[3px] bg-brand-500 transition-all group-hover:w-full group-focus:w-full; 
+    @apply absolute -bottom-1 left-0 w-0 h-[3px] bg-brand-500 transition-all group-hover:w-full group-focus:w-full;
   }
 
   .section {
@@ -102,20 +102,20 @@ body {
     @apply w-full font-bold text-lg text-brand-500 mb-4;
   }
 
-  .about-me-li {
-    @apply w-full col-center gap-5 px-3 py-3 rounded-lg border-brand-100 border-2 delay-300;
+  .introduction-contact {
+    @apply relative row-center justify-center text-base cursor-pointer;
   }
 
-  .about-me-li-btn {
-    @apply row-center w-11/12 text-2xl font-semibold;
+  .introduction-contact-text {
+    @apply absolute bottom-0 hidden bg-white text-brand-200 px-3 h-6 rounded-md group-hover:-top-8 group-hover:flex;
   }
 
-  .about-me-li-p {
-    @apply row-center w-11/12 text-xl py-5;
+  .about-me-p {
+    @apply col-center gap-5 px-3 rounded-lg border-brand-100 border-2  w-full text-xl py-5 h-auto;
   }
 
   .navigation-div-nav {
-    @apply hidden sm:row-center text-brand-500 font-semibold w-7/12 py-1;
+    @apply hidden md:row-center text-brand-500 font-semibold w-7/12 py-1;
   }
 
   .navigation-div-nav-mobile {
@@ -127,7 +127,7 @@ body {
   }
 
   .contacts-nav-link-icon {
-    @apply text-3xl;
+    @apply text-xl sm:text-3xl;
   }
 
   .card-div {

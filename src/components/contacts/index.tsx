@@ -1,22 +1,21 @@
+import { user } from "@/utils/userData";
 import Link from "next/link";
-import { BsLinkedin } from "react-icons/bs";
 import { FaWhatsapp, FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
 
 export default function Contacts() {
   return (
-    <section id="contact" className="section min-h-0 h-[50vh]">
+    <section id="contact" className="section max-w-7xl min-h-0 h-[55vh]">
       <h2 className="section-title"># Contatos</h2>
       <div className="w-full col-center gap-10 justify-between lg:flex-row lg:items-start">
         <p className="w-full lg:w-1/2 mt-5">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-          impedit, perferendis explicabo earum, exercitationem facere rem quae
-          quam dicta adipisci praesentium voluptatibus voluptatem distinctio
-          vero ipsum vitae suscipit autem deleniti!
+          Se você está interessado em trabalhar comigo, fornecer feedback ou
+          colaborar em projetos, não hesite em entrar em contato. Estou ansioso
+          para ouvir de você e discutir como podemos colaborar juntos!
         </p>
         <nav className="w-full max-w-lg lg:w-1/2 col-center border-4 border-solid border-brand-400 py-4 gap-3">
           <Link
-            href={"https://www.linkedin.com/in/andressalsmenezes/"}
+            href={user.linkedinUrl}
             className="contacts-nav-link hover:text-blue-600"
             target="_blank"
             rel="noopener"
@@ -25,16 +24,16 @@ export default function Contacts() {
             Andressa Menezes
           </Link>
           <Link
-            href={"mailto:andressalsmenezes@gmail.com"}
-            className="contacts-nav-link text-base hover:text-red-500"
+            href={user.email}
+            className="contacts-nav-link text-sm sm:text-base hover:text-red-500"
             target="_blank"
             rel="noopener"
           >
-            <GrMail className="contacts-nav-link-icon " />
+            <GrMail className="contacts-nav-link-icon" />
             andressalsmenezes@gmail.com
           </Link>
           <Link
-            href={"https://www.linkedin.com/in/andressalsmenezes/"}
+            href={user.whatsappNumber}
             className="contacts-nav-link hover:text-green-500"
             target="_blank"
             rel="noopener"
@@ -43,13 +42,13 @@ export default function Contacts() {
             Andressa Menezes
           </Link>
           <Link
-            href={"https://www.linkedin.com/in/andressalsmenezes/"}
-            className="contacts-nav-link hover:text-indigo-500"
+            href={user.githubUrl}
             target="_blank"
             rel="noopener"
+            className="contacts-nav-link hover:text-indigo-500"
           >
-            <FaDiscord className="contacts-nav-link-icon" />
-            Andressa_Sampaio#5977
+            <FaGithub className="contacts-nav-link-icon" />
+            AndressaLSMenezes
           </Link>
         </nav>
       </div>
