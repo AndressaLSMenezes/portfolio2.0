@@ -14,10 +14,10 @@ export default function Introduction() {
     >
       <div className="w-11/12 col-center justify-between mt-14 sm:flex-row gap-y-10 sm:h-3/4 max-w-7xl">
         <div className="w-full sm:w-1/2 col-center items-start justify-around gap-10 h-full">
-          <h1 className="flex flex-col text-2xl font-medium font-primary w-full">
-            Hello!
-            <span>Me chamo Andressa Menezes</span>
-            <span>Sou Desenvolvedora FullStack</span>
+          <h1 className="flex flex-col text-2xl font-primary w-full">
+            <span className="font-primary font-bold">Hello!</span>
+            <span className="font-primary font-medium">Me chamo Andressa Menezes</span>
+            <span className="font-primary font-medium">Sou Desenvolvedora FullStack</span>
           </h1>
           <div className="row-center justify-between w-full mt-5">
             <span className="border-b-2 border-brand-500 w-1/2"></span>

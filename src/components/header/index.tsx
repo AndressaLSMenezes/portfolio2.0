@@ -24,23 +24,25 @@ export default function Header() {
           {isOpenMenu ? <IoCloseSharp /> : <IoMenu />}
         </button>
         <nav className="navigation-div-nav">
-          <Link href={"#introduction"} className="relative group">
+          <button type="button" onClick={()=> {
+            window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+          }} className="relative group">
             <span>Inicio</span>
             <span className="header-link-span"></span>
-          </Link>
-          <Link href={"#aboutMe"} className="relative group">
+          </button>
+          <Link replace href={"#aboutMe"} className="relative group">
             <span>Sobre mim</span>
             <span className="header-link-span"></span>
           </Link>
-          <Link href={"#skills"} className="relative group">
+          <Link replace href={"#skills"} className="relative group">
             <span>Habilidades</span>
             <span className="header-link-span"></span>
           </Link>
-          <Link href={"#projects"} className="relative group">
+          <Link replace href={"#projects"} className="relative group">
             <span>Projetos</span>
             <span className="header-link-span"></span>
           </Link>
-          <Link href={"#contact"} className="relative group">
+          <Link replace href={"#contact"} className="relative group">
             <span>Contatos</span>
             <span className="header-link-span"></span>
           </Link>
@@ -54,23 +56,23 @@ export default function Header() {
         }`}
       >
         <Swithcer setIsOpenMenu={setIsOpenMenu} />
-        <Link href={"#introduction"} className="relative group">
+        <Link replace href={"#introduction"} className="relative group">
           <span onClick={() => setIsOpenMenu(false)}>Inicio</span>
           <span className="header-link-span"></span>
         </Link>
-        <Link href={"#aboutMe"} className="relative group">
+        <Link replace href={"#aboutMe"} className="relative group">
           <span onClick={() => setIsOpenMenu(false)}>Sobre mim</span>
           <span className="header-link-span"></span>
         </Link>
-        <Link href={"#skills"} className="relative group">
+        <Link replace href={"#skills"} className="relative group">
           <span onClick={() => setIsOpenMenu(false)}>Habilidades</span>
           <span className="header-link-span"></span>
         </Link>
-        <Link href={"#projects"} className="relative group">
+        <Link replace href={"#projects"} className="relative group">
           <span onClick={() => setIsOpenMenu(false)}>Projetos</span>
           <span className="header-link-span"></span>
         </Link>
-        <Link href={"#contact"} className="relative group">
+        <Link replace href={"#contact"} className="relative group">
           <span onClick={() => setIsOpenMenu(false)}>Contatos</span>
           <span className="header-link-span"></span>
         </Link>

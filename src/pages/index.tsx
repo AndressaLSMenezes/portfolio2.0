@@ -6,11 +6,14 @@ import Header from "@/components/header";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
 import React from "react";
+import Head from "next/head";
 
 export default function Home() {
-
   return (
     <>
+      <Head>
+        <title>Portfólio - Andressa Menezes</title>
+      </Head>
       <Header />
       <main className="col-center gap-44 sm:gap-10 h-auto w-screen relative pb-36">
         <Introduction />

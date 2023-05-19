@@ -32,6 +32,17 @@ body {
   background: linear-gradient(to bottom, transparent, var(--background-end-rgb))
     var(--background-start-rgb);
 }
+	
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+    overflow: scroll;
+  }
+}
+ 
+:target {
+  scroll-margin-top: .8em;
+}
 
 @layer base {
   html,
@@ -54,10 +65,6 @@ body {
   section,
   button {
     @apply m-0 p-0 border-0 align-baseline box-border font-secondary;
-  }
-
-  html {
-    @apply scroll-smooth;
   }
 
   #__next {
@@ -127,7 +134,7 @@ body {
   }
 
   .contacts-nav-link-icon {
-    @apply text-xl sm:text-3xl;
+    @apply text-xl sm:text-3xl h-14;
   }
 
   .card-div {
