@@ -1,5 +1,6 @@
-import projects, { IProject } from "@/utils/projectData";
+import { IProject } from "@/utils/projectData";
 import Link from "next/link";
+import Image from "next/image";
 
 type IProps = {
   project: IProject;
@@ -7,13 +8,15 @@ type IProps = {
 
 export default function CardProject({ project }: IProps) {
   return (
-    <li
-      className="w-11/12 sm:w-7/12 max-w-[250px] h-80 bg-transparent group perspective row-center justify-center"
-    >
+    <li className="w-11/12 sm:w-7/12 max-w-[250px] h-96 bg-transparent group perspective row-center justify-center">
       <div className="card-div">
         <div className="card-div-front">
-          <h3 className="text-2xl font-bold">{project.title}</h3>
-          <div className="row-center flex-wrap gap-2 py-1">
+          <figure className="w-full h-32 overflow-hidden rounded-t-lg ">
+            <Image src={project.image} alt={project.title} className="h-full" />
+          </figure>
+          <h3 className="w-11/12 text-2xl font-bold">{project.title}</h3>
+          <p className="w-11/12">{project.description}</p>
+          <div className="w-11/12 row-center justify-stretch flex-wrap gap-2 py-1">
             {project.tasks.map((task, taskIndex) => (
               <span
                 key={taskIndex}
@@ -23,7 +26,6 @@ export default function CardProject({ project }: IProps) {
               </span>
             ))}
           </div>
-          <p>{project.description}</p>
         </div>
 
         <div className="card-div-back">

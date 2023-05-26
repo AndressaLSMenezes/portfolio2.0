@@ -13,6 +13,7 @@ export default function Home() {
     <>
       <Head>
         <title>Portfólio - Andressa Menezes</title>
+        <link rel="icon" href="@/assets/decoration/logo.svg" sizes="any" />
       </Head>
       <Header />
       <main className="col-center gap-44 sm:gap-10 h-auto w-screen relative pb-36">
