@@ -7,7 +7,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="section h-[90vh] mt-44 sm:mt-0">
-      <h2 className="section-title text-2xl"># Habilidades</h2>
+      <h2 className="section-title"># Habilidades</h2>
       <div className="col-center md:flex-row items-center justify-between w-full py-1 gap-y-4">
         <section className="flex flex-col justify-start w-full md:w-1/2 gap-3 md:h-96 md:pt-10">
           <h3 className="font-bold text-2xl">{skill.title}</h3>
